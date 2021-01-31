@@ -493,9 +493,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  10.62
-    #define DEFAULT_Ki   0.65
-    #define DEFAULT_Kd  43.68
+    #define DEFAULT_Kp  12.30
+    #define DEFAULT_Ki   0.77
+    #define DEFAULT_Kd  49.00
   #endif
 #endif // PIDTEMP
 
@@ -533,9 +533,9 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   //Stock PCB bed tuned for 80oC
-  #define DEFAULT_bedKp 212.63
-  #define DEFAULT_bedKi 42.48
-  #define DEFAULT_bedKd 709.48
+  #define DEFAULT_bedKp 184.50
+  #define DEFAULT_bedKi 30.14
+  #define DEFAULT_bedKd 752.80
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
@@ -684,7 +684,7 @@
 #define Z_DRIVER_TYPE TMC2130
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
-#define Z2_DRIVER_TYPE TMC2130
+//#define Z2_DRIVER_TYPE TMC2130
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
 #define E0_DRIVER_TYPE TMC2130
@@ -1096,7 +1096,7 @@
 //#define DELAY_BEFORE_PROBING 200  // (ms) To prevent vibrations from triggering piezo sensors
 
 // Require minimum nozzle and/or bed temperature for probing.
-//#define PREHEAT_BEFORE_PROBING
+#define PREHEAT_BEFORE_PROBING
 #if ENABLED(PREHEAT_BEFORE_PROBING)
   #define PROBING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
   #define PROBING_BED_TEMP     50
@@ -1128,7 +1128,7 @@
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR true
 #define INVERT_Y_DIR true
-#define INVERT_Z_DIR false
+#define INVERT_Z_DIR true
 
 // @section extruder
 
